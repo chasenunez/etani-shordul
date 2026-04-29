@@ -1,42 +1,22 @@
-Etani-shordul ingests a text file and outputs key statistics about its composition — including total word count and a ranked frequency of letters (top ranked letters include e,t,a,n,i,s,h,o,r,d,u,l). It’s a quick way to explore how language patterns differ between literary works.
+# bookbot
 
-### What It Does
+Reads a plain-text book and prints word count plus a letter-frequency ranking. The name's a nod to **etaoin shrdlu** — the rough order of letter frequency in English text — and one of the small joys of running it on Frankenstein is that the output really does start `e, t, a, o, i, n, s, h, r, d`.
 
-1. **Reads** a book text file (e.g., `frankenstein.txt`).
-2. **Counts** total words in the text.
-3. **Counts** how many times each letter appears (case-insensitive).
-4. **Sorts and displays** letters in descending order of frequency.
-
-### Project Structure
-
-```
-bookbot/
-├── main.py         # Entry point for the script
-├── stats.py        # Helper functions for counting and ordering
-└── books/          # Folder containing example .txt books
-```
-
-### How to Use
-
-#### 1. Clone the Repository
-
-```bash
-git clone https://github.com/chasenunez/bookbot.git
-cd bookbot
-```
-
-#### 2. Add Some Books
-
-Place plain-text `.txt` files into a folder named `books/`.
-You can download free public-domain books from [Project Gutenberg](https://www.gutenberg.org/).
-
-#### 3. Run BookBot
+## Run
 
 ```bash
 python3 main.py books/frankenstein.txt
 ```
 
-#### 4. Example Output
+Drop `.txt` files (Project Gutenberg is full of them) into a `books/` folder. Anything plain-text will work.
+
+## Files
+
+- `main.py` — entry point
+- `stats.py` — counting and ordering helpers
+- `books/` — sample text files
+
+## Example output
 
 ```
 ============ BOOKBOT ============
@@ -58,18 +38,7 @@ l: 12306
 m: 10206
 u: 10111
 c: 9011
-f: 8451
-y: 7756
-w: 7450
-p: 5952
-g: 5795
-b: 4868
-v: 3737
-k: 1661
-x: 691
-j: 497
-q: 325
-z: 235
+...
 æ: 28
 â: 8
 ê: 7
@@ -77,3 +46,5 @@ z: 235
 ô: 1
 ============= END ===============
 ```
+
+The accented letters at the bottom are a surprisingly reliable fingerprint — Frankenstein has 28 instances of `æ` because of all the "encyclopædia"-style spellings from 1818.
