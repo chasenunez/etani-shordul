@@ -1,6 +1,6 @@
 # bookbot
 
-Reads a plain-text book and prints word count plus a letter-frequency ranking. The name's a nod to **etaoin shrdlu** — the rough order of letter frequency in English text — and one of the small joys of running it on Frankenstein is that the output really does start `e, t, a, o, i, n, s, h, r, d`.
+Reads a plain-text book and prints word count plus a letter-frequency ranking. The name's a nod to **etaoin shrdlu** — the rough order of letter frequency in English text.
 
 ## Run
 
